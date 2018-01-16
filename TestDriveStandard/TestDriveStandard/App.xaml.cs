@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using TestDriveStandard.Models;
+using TestDriveStandard.Views;
 using Xamarin.Forms;
 
 namespace TestDriveStandard
@@ -13,12 +14,17 @@ namespace TestDriveStandard
 		{
 			InitializeComponent();
 
-			MainPage = new TestDriveStandard.MainPage();
+			//MainPage = new NavigationPage(new ListagemView());
+		    MainPage = new LoginView();
 		}
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+		    MessagingCenter.Subscribe<Usuario>(this, "LoginSucesso", (usuario) =>
+		    {
+		        //MainPage = new NavigationPage( new ListagemView());
+		        MainPage = new MasterDetailView(usuario);
+		    });
 		}
 
 		protected override void OnSleep ()

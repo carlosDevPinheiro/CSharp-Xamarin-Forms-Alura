@@ -4,8 +4,15 @@
              xmlns:local="clr-namespace:TestDriveStandard"
              x:Class="TestDriveStandard.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+        <Label Text="Welcome to Xamarin.Forms!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+  
+    </StackLayout>
+	
 
 </ContentPage>

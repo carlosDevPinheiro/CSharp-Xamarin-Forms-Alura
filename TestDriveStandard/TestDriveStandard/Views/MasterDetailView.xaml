@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:TestDriveStandard.Views"
+             x:Class="TestDriveStandard.Views.MasterDetailView">
+
+
+    <MasterDetailPage.Master>
+        <!--ContentPage é obrigatorio um title se nao gera exception--><!--
+        <view:MasterView></view:MasterView>-->
+
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <!-- instancia de navigation page -->
+            <x:Arguments>
+                <!-- passando parametros para NavigationPage -->
+                <view:ListagemView></view:ListagemView>
+                <!-- o mesmo que => new NavigationPage(new ListagemView())-->
+            </x:Arguments>
+
+        </NavigationPage>
+        <!--
+            dessa forma  não tem uma pilha de navegação então ao tentar navegar para outr pagina vai estourar exception
+        <view:ListagemView></view:ListagemView>
+        -->
+    </MasterDetailPage.Detail>
+    
+
+
+    <!-- <MasterDetailPage.Master>
+      
+            ContentPage é obrigatorio um title se nao gera exception
+        
+            <ContentPage Title="Pagin de Perfil">
+                <Label Text="Este é o perfil do Usuario"></Label>
+            </ContentPage>
+        --><!--
+    </MasterDetailPage.Master>-->
+
+    <!--<MasterDetailPage.Detail>
+     
+         --><!--dessa forma  não tem uma pilha de navegação então ao tentar navegar para outr pagina vai estourar exception--><!--
+        <view:ListagemView></view:ListagemView>
+       
+    </MasterDetailPage.Detail>-->
+    
+</MasterDetailPage>
